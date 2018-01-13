@@ -16,11 +16,11 @@ public class GrabDataImpl implements GrabData{
 		for(String str : categoryArr){
 			ShareData sd = new ShareData(str);
 			SingleThread st = new SingleThread(sd,finalAllBooks);
-				for(int i = 0; i < 10; i++){     //Ã¿ÖÖÀàÐÍ²éÑ¯µÄÒ³Êý£¬ÕâÀïÒª¿ªÆô30¸öÏß³Ì£¬Í¼Êé²éÑ¯³öµÄ×ÜÊýÊÇ600±¾
+				for(int i = 0; i < 10; i++){     //æ¯ç§ç±»åž‹æŸ¥è¯¢çš„é¡µæ•°ï¼Œè¿™é‡Œè¦å¼€å¯30ä¸ªçº¿ç¨‹ï¼Œå›¾ä¹¦æŸ¥è¯¢å‡ºçš„æ€»æ•°æ˜¯600æœ¬
 					Thread thread = new Thread(st);
 					thread.start();
 					try {
-						thread.sleep(1000);        //ÉèÖÃÏß³Ì¿ªÆôÏß³Ì¼ä¸ôÊ±¼ä£¬·ÀÖ¹¶ÌÊ±¼äÆµ·±·ÃÎÊ·þÎñÆ÷£¬µ¼ÖÂ403µÈ¶¹°êÈ¨ÏÞ·ÃÎÊµÄÏÞÖÆ
+						thread.sleep(1);        //è®¾ç½®çº¿ç¨‹å¼€å¯çº¿ç¨‹é—´éš”æ—¶é—´ï¼Œé˜²æ­¢çŸ­æ—¶é—´é¢‘ç¹è®¿é—®æœåŠ¡å™¨ï¼Œå¯¼è‡´403ç­‰è±†ç“£æƒé™è®¿é—®çš„é™åˆ¶
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
